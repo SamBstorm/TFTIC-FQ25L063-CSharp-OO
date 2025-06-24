@@ -17,34 +17,58 @@ namespace Exo_ProjetBanque
 
             Courant c1 = new Courant() { 
                 Numero = "BE01",
-                LigneDeCredit = -50,
+                LigneDeCredit = 50,
                 Titulaire = p
             };
 
-            Console.WriteLine(
-@$"Compte courant {c1.Numero}
-Titulaire : {c1.Titulaire.Nom} {c1.Titulaire.Prenom}
-Solde actuel : {c1.Solde} €
-Ligne de crédit attribué : {c1.LigneDeCredit} €"
-            );
+            Banque bank = new Banque()
+            {
+                Nom = "Au petit bénéfice!"
+            };
 
-            c1.Depot(100);
+            bank.Ajouter(c1);
 
-            Console.WriteLine(
-@$"Compte courant {c1.Numero}
-Titulaire : {c1.Titulaire.Nom} {c1.Titulaire.Prenom}
-Solde actuel : {c1.Solde} €
-Ligne de crédit attribué : {c1.LigneDeCredit} €"
-            );
+            Courant compteActuel;
+            do
+            {
+                Console.WriteLine("Veuillez indiquer votre numéro de compte :");
+                string numero = Console.ReadLine();
 
-            c1.Retrait(200);
+                compteActuel = bank[numero];
 
-            Console.WriteLine(
-@$"Compte courant {c1.Numero}
-Titulaire : {c1.Titulaire.Nom} {c1.Titulaire.Prenom}
-Solde actuel : {c1.Solde} €
-Ligne de crédit attribué : {c1.LigneDeCredit} €"
-            );
+            } while (compteActuel is null);
+
+            char choix;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine(
+    @$"Compte courant {compteActuel.Numero}
+Titulaire : {compteActuel.Titulaire.Nom} {compteActuel.Titulaire.Prenom}
+Solde actuel : {compteActuel.Solde} €
+Ligne de crédit attribué : {compteActuel.LigneDeCredit} €"
+                );
+
+                Console.WriteLine("(D)épot - (R)etrait - (Q)uitter");
+                choix = Console.ReadKey().KeyChar;
+
+                if (choix == 'r' || choix == 'R' || choix == 'd' || choix == 'D')
+                {
+                    double montant;
+                    do Console.WriteLine("Quelle somme ?");
+                    while (!double.TryParse(Console.ReadLine(), out montant));
+
+                    if (choix == 'r' || choix == 'R')
+                    {
+                        compteActuel.Retrait(montant);
+                    }
+                    else
+
+                    {
+                        compteActuel.Depot(montant);
+                    }
+                } 
+            } while (choix != 'q' && choix != 'Q');
         }
     }
 }
