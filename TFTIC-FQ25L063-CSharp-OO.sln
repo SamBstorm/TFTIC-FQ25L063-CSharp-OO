@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36127.28 d17.14
+VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-01-Namespace", "Demo-01-Namespace\Demo-01-Namespace.csproj", "{566850C6-BD7C-441D-B3E3-EDF93412CA4C}"
 EndProject
@@ -10,6 +10,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-03-NotionClass", "Demo-03-NotionClass\Demo-03-NotionClass.csproj", "{28F6EA42-31E5-417B-9C73-E910A383844A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-04-Proprietes", "Demo-04-Proprietes\Demo-04-Proprietes.csproj", "{A3B17545-CAF5-46B9-A7F1-ADB8CB97F74E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exos", "Exos", "{BC30598B-3EFA-409A-90B2-2AE95DEEF2A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo-ProjetBanque", "Exo-ProjetBanque\Exo-ProjetBanque.csproj", "{6BA09D18-548A-4919-9B29-C69BA2A5A202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-05-CheckedUnchecked", "Demo-05-CheckedUnchecked\Demo-05-CheckedUnchecked.csproj", "{4C271654-2679-462B-A259-891732696648}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +41,25 @@ Global
 		{A3B17545-CAF5-46B9-A7F1-ADB8CB97F74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3B17545-CAF5-46B9-A7F1-ADB8CB97F74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3B17545-CAF5-46B9-A7F1-ADB8CB97F74E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA09D18-548A-4919-9B29-C69BA2A5A202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA09D18-548A-4919-9B29-C69BA2A5A202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA09D18-548A-4919-9B29-C69BA2A5A202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA09D18-548A-4919-9B29-C69BA2A5A202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C271654-2679-462B-A259-891732696648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C271654-2679-462B-A259-891732696648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C271654-2679-462B-A259-891732696648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C271654-2679-462B-A259-891732696648}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{566850C6-BD7C-441D-B3E3-EDF93412CA4C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{B2DA67AE-2D3B-4837-961F-D073AB79F1FA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{28F6EA42-31E5-417B-9C73-E910A383844A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A3B17545-CAF5-46B9-A7F1-ADB8CB97F74E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{6BA09D18-548A-4919-9B29-C69BA2A5A202} = {BC30598B-3EFA-409A-90B2-2AE95DEEF2A3}
+		{4C271654-2679-462B-A259-891732696648} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {036573EE-9754-4B79-B941-73C57673425A}
